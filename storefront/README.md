@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://serverless.aws.oceansoft.io">
+  <a href="https://ecommerce.oceansoft.io">
     <img alt="OceanSoft" src="https://academy.job4u.io/static/b5b477f8d3c818783b0ec3fb68a5e570/e64f1/logo.webp" width="100" />
   </a>
 </p>
@@ -24,7 +24,14 @@
   </a>
 </p>
 
-> ✅ **Prerequisites**: An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
+<details>
+<summary>🚦 Prerequisites:</summary>
+  
+  * ✅ [eCommerce Backend](https://github.com/medusajs/medusa) Submodule
+
+  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
+
+</details>
 
 <details>
 <summary>🚦 The Tech Stack is built with:</summary>
@@ -41,7 +48,7 @@
       ```
   
   - [ ] [Cypress](https://www.cypress.io/)
-  - [ ] [Medusa](https://medusajs.com/)
+  - [x] [Medusa](https://medusajs.com/) || [Medusa Next.js Starter](https://github.com/medusajs/nextjs-starter-medusa)
   - [ ] [Search]
   
 </details>
