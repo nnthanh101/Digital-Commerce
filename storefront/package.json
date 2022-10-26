@@ -2,8 +2,8 @@
   "name": "storefront",
   "version": "1.0.0",
   "private": true,
-  "author": "Thanh Nguyen <nnthanh101@gmail.com> (https://aws.oceansoft.io)",
-  "license": "Apache-2.0",
+  "author": "OceanSoft <admin@oceansoft.io> (https://aws.oceansoft.io)",
+  "license": "MIT",
   "description": "⚡ A Next.js storefront for the Shopify-like digital commerce platform that includes ready integrations with PayPal, MeiliSearch, Stripe, and many more! 💰",
   "keywords": [
     "ecommerce",
@@ -13,26 +13,52 @@
     "nextjs"
   ],
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 8000",
     "lint": "next lint",
+    "cypress": "cypress open",
     "analyze": "ANALYZE=true next build"
   },
+  "resolutions": {
+    "webpack": "^5",
+    "@types/react": "17.0.40"
+  },
   "dependencies": {
-    "next": "13.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@headlessui/react": "^1.6.1",
+    "@hookform/error-message": "^2.0.0",
+    "@medusajs/medusa": "^1.5.0",
+    "@medusajs/medusa-js": "^1.3.1",
+    "@meilisearch/instant-meilisearch": "^0.9.0",
+    "@paypal/paypal-js": "^5.1.1",
+    "@paypal/react-paypal-js": "^7.8.1",
+    "@stripe/react-stripe-js": "^1.14.0",
+    "@stripe/stripe-js": "^1.42.0",
+    "clsx": "^1.2.1",
+    "lodash": "^4.17.21",
+    "medusa-react": "^2.0.0",
+    "next": "^12.2.0",
+    "react": "17.0.2",
+    "react-country-flag": "^3.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.30.0",
+    "react-instantsearch-hooks-web": "^6.29.0",
+    "react-intersection-observer": "^9.3.4",
+    "react-query": "^3.34.16",
+    "sharp": "^0.30.7"
   },
   "devDependencies": {
-    "@types/node": "18.11.5",
-    "@types/react": "18.0.23",
-    "@types/react-dom": "18.0.7",
-    "autoprefixer": "^10.4.12",
-    "eslint": "8.26.0",
-    "eslint-config-next": "13.0.0",
-    "postcss": "^8.4.18",
-    "tailwindcss": "^3.2.1",
-    "typescript": "4.8.4"
+    "@babel/core": "^7.17.5",
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.40",
+    "@types/react-instantsearch-dom": "^6.12.3",
+    "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
+    "cypress": "^9.5.2",
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.1.0",
+    "postcss": "^8.4.8",
+    "tailwindcss": "^3.0.23",
+    "typescript": "4.6.2"
   }
 }

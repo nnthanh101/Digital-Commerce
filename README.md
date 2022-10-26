@@ -53,3 +53,19 @@
 1. 📚 [ [Open-Source 🆓] Medusa Headless-eCommerce Shopify alternative 🐳](https://blog.oceansoft.io/medusa-headless-ecommerce-shopify-alternative)
 
 2. 📚 [Documentation as Code 🎓](https://blog.oceansoft.io/docs-as-code): [ecommerce.aws.oceansoft.io](https://ecommerce.aws.oceansoft.io) 
+
+<details>
+<summary>3. eCommerce Backend</summary>
+  
+  * ✅ [eCommerce Backend](https://github.com/medusajs/medusa)
+
+    ```
+    # git submodule add https://github.com/medusajs/medusa backend
+    # git submodule init && git submodule update --checkout --recursive
+
+    
+    ```
+
+  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
+
+</details>
