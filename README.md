@@ -50,5 +50,6 @@
 
 ## Deliverables
 
-* 📚 [🆓 [Open-Source] Medusa Headless-eCommerce Shopify alternative 🐳](https://blog.oceansoft.io/medusa-headless-ecommerce-shopify-alternative)
-* 
+1. 📚 [ [🆓 Open-Source] Medusa Headless-eCommerce Shopify alternative 🐳](https://blog.oceansoft.io/medusa-headless-ecommerce-shopify-alternative)
+
+2. [Documentation as Code 🎓](https://blog.oceansoft.io/docs-as-code): [ecommerce.aws.oceansoft.io](https://ecommerce.aws.oceansoft.io) 
