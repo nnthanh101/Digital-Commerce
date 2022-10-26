@@ -49,11 +49,13 @@
 # Quickstart
 
 <details>
-<summary>🚀 Deploy to Netlify in 5 minutes ⏱️</summary>
+<summary>🚀 Deploy in 5 minutes ⏱️</summary>
 
-  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/OceanSoftIO/Serverless)
+  * [x] [Easily Deploy to Vercel with One Click](https://vercel.com/solutions/nextjs)
 
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/1bf35fab-4d78-4932-91f3-8c8c88c81622/deploy-status)](https://app.netlify.com/sites/serverless-ecommerce-storefront/deploys)
+  * [ ] [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/OceanSoftIO/Serverless) || [![Netlify Status](https://api.netlify.com/api/v1/badges/1bf35fab-4d78-4932-91f3-8c8c88c81622/deploy-status)](https://app.netlify.com/sites/serverless-ecommerce-storefront/deploys)
+
+  * [ ] [Next.js plugin from Serverless Framework](https://github.com/serverless-nextjs/serverless-next.js)
   
 </details>
 
