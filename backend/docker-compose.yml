@@ -1,0 +1,44 @@
+version: "3.8"
+services:
+  ecommerce:
+    container_name: ecommerce
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ecommerce:starter
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/ecommerce-db
+      REDIS_URL: redis://redis
+      NODE_ENV: development
+      JWT_SECRET: something
+      COOKIE_SECRET: something
+      PORT: 9000
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/app/ecommerce
+      - node_modules:/app/ecommerce/node_modules
+
+  postgres:
+    image: postgres:12.12-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ecommerce-db
+    volumes:
+      - data:/var/lib/postgresql/data/ ## using a volume
+      # - ./data:/var/lib/postgresql/data/       ## if you want to use a bind folder
+
+  redis:
+    image: redis
+    expose:
+      - 6379
+
+volumes:
+  node_modules:
+  data:

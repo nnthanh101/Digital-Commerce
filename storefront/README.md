@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/OceanSoftIO/ecommerce-storefront/blob/main/LICENSE">
+  <a href="https://github.com/OceanSoftIO/ecommerce/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue" alt="Released under the MIT license." />
   </a>
   <a href="https://discord.gg/KAS8GBjs">
@@ -145,7 +145,7 @@ This starter is configured to support using the `medusa-search-meilisearch` plug
 }
 ```
 
-Before you can search you will need to install the plugin in your Medusa server, for a written guide on how to do this – [see our documentation](https://docs.medusajs.com/add-plugins/meilisearch).
+Before you can search you will need to install the plugin in your eCommerce Server, for a written guide on how to do this – [see our documentation](https://docs.medusajs.com/add-plugins/meilisearch).
 
 The search components in this starter are developed with Algolia's `react-instant-search-hooks-web` library which should make it possible for you to seemlesly change your search provider to Algoli instead of MeiliSearch.
 
@@ -170,4 +170,4 @@ export const SEARCH_INDEX_NAME =
   process.env.NEXT_PUBLIC_INDEX_NAME || "products"
 ```
 
-After this you will need to set up Algolia with your Medusa server, and then you should be good to go. For a more thorough walkthrough of using Algolia with Medusa – [see our documentation](https://docs.medusajs.com/add-plugins/algolia), and the [documentation for using `react-instantsearch-hooks-web`](https://www.algolia.com/doc/guides/building-search-ui/getting-started/react-hooks/).
+After this you will need to set up Algolia with your eCommerce Server, and then you should be good to go. For a more thorough walkthrough of using Algolia with Medusa – [see our documentation](https://docs.medusajs.com/add-plugins/algolia), and the [documentation for using `react-instantsearch-hooks-web`](https://www.algolia.com/doc/guides/building-search-ui/getting-started/react-hooks/).

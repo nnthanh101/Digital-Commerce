@@ -38,7 +38,7 @@ const OrderOverview = () => {
       </p>
       <div className="mt-4">
         <Link href="/" passHref>
-          <Button>Continue shopping</Button>
+          <Button>Continue Shopping</Button>
         </Link>
       </div>
     </div>

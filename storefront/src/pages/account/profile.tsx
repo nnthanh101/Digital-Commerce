@@ -8,7 +8,7 @@ import { NextPageWithLayout } from "types/global"
 const Profile: NextPageWithLayout = () => {
   return (
     <>
-      <Head title="Profile" description="View and edit your OceanSoft profile." />
+      <Head title="Profile" description="View and edit your eCommerce profile." />
       <ProfileTemplate />
     </>
   )

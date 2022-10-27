@@ -1,0 +1,2 @@
+[template.environment]
+GATSBY_ECOMMERCE_BACKEND_URL="URL of your eCommerce Server"
