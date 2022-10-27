@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/OceanSoftIO/ecommerce-storefront/blob/main/LICENSE">
+  <a href="https://github.com/OceanSoftIO/ecommerce/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue" alt="Released under the MIT license." />
   </a>
   <a href="https://discord.gg/KAS8GBjs">
@@ -27,7 +27,20 @@
 <details>
 <summary>🚦 Prerequisites:</summary>
   
-  * ✅ [eCommerce Backend](https://github.com/medusajs/medusa) Submodule
+  * ✅ [eCommerce Backend](https://github.com/medusajs/medusa)
+
+  ```
+  echo "Install the Medusa CLI"
+  yarn global add @medusajs/medusa
+
+  medusa new backend
+  # medusa new backend --seed
+
+  cd backend
+  # medusa develop
+  yarn start
+
+  ```
 
   * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
 
@@ -63,6 +76,8 @@
   * [ ] [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/OceanSoftIO/Serverless) || [![Netlify Status](https://api.netlify.com/api/v1/badges/1bf35fab-4d78-4932-91f3-8c8c88c81622/deploy-status)](https://app.netlify.com/sites/serverless-ecommerce-storefront/deploys)
 
   * [ ] [Next.js plugin from Serverless Framework](https://github.com/serverless-nextjs/serverless-next.js)
+
+  🎓 Stick to **Vercel** if you value your time and sanity, and honestly, I would stick to Vercel for as long as I could, because it's not just about how much of a value it is initially, but the fact that their developer experience is second to none and the wide range of frameworks they support makes them my primary destination to deploy all things front-end.
   
 </details>
 
@@ -130,7 +145,7 @@ This starter is configured to support using the `medusa-search-meilisearch` plug
 }
 ```
 
-Before you can search you will need to install the plugin in your Medusa server, for a written guide on how to do this – [see our documentation](https://docs.medusajs.com/add-plugins/meilisearch).
+Before you can search you will need to install the plugin in your eCommerce Server, for a written guide on how to do this – [see our documentation](https://docs.medusajs.com/add-plugins/meilisearch).
 
 The search components in this starter are developed with Algolia's `react-instant-search-hooks-web` library which should make it possible for you to seemlesly change your search provider to Algoli instead of MeiliSearch.
 
@@ -155,4 +170,4 @@ export const SEARCH_INDEX_NAME =
   process.env.NEXT_PUBLIC_INDEX_NAME || "products"
 ```
 
-After this you will need to set up Algolia with your Medusa server, and then you should be good to go. For a more thorough walkthrough of using Algolia with Medusa – [see our documentation](https://docs.medusajs.com/add-plugins/algolia), and the [documentation for using `react-instantsearch-hooks-web`](https://www.algolia.com/doc/guides/building-search-ui/getting-started/react-hooks/).
+After this you will need to set up Algolia with your eCommerce Server, and then you should be good to go. For a more thorough walkthrough of using Algolia with Medusa – [see our documentation](https://docs.medusajs.com/add-plugins/algolia), and the [documentation for using `react-instantsearch-hooks-web`](https://www.algolia.com/doc/guides/building-search-ui/getting-started/react-hooks/).
