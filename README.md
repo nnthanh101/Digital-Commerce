@@ -60,10 +60,11 @@
   * ✅ [eCommerce Backend](https://github.com/medusajs/medusa)
 
     ```
-    # git submodule add https://github.com/medusajs/medusa backend
-    # git submodule init && git submodule update --checkout --recursive
+    git clone https://github.com/OceanSoftIO/ecommerce
 
-    
+    cd ecommerce/backend
+    # medusa develop
+    yarn start
     ```
 
   * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
