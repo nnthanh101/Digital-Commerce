@@ -63,6 +63,8 @@
   * [ ] [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/OceanSoftIO/Serverless) || [![Netlify Status](https://api.netlify.com/api/v1/badges/1bf35fab-4d78-4932-91f3-8c8c88c81622/deploy-status)](https://app.netlify.com/sites/serverless-ecommerce-storefront/deploys)
 
   * [ ] [Next.js plugin from Serverless Framework](https://github.com/serverless-nextjs/serverless-next.js)
+
+  🎓 Stick to **Vercel** if you value your time and sanity, and honestly, I would stick to Vercel for as long as I could, because it's not just about how much of a value it is initially, but the fact that their developer experience is second to none and the wide range of frameworks they support makes them my primary destination to deploy all things front-end.
   
 </details>
 
