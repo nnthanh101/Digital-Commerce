@@ -27,7 +27,20 @@
 <details>
 <summary>🚦 Prerequisites:</summary>
   
-  * ✅ [eCommerce Backend](https://github.com/medusajs/medusa) Submodule
+  * ✅ [eCommerce Backend](https://github.com/medusajs/medusa)
+
+  ```
+  echo "Install the Medusa CLI"
+  yarn global add @medusajs/medusa
+
+  medusa new backend
+  # medusa new backend --seed
+
+  cd backend
+  # medusa develop
+  yarn start
+
+  ```
 
   * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
 
