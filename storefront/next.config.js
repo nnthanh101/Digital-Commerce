@@ -5,7 +5,8 @@ module.exports = withStoreConfig({
   features: store.features,
   reactStrictMode: true,
   images: {
-    domains: ["oceansoft-cdn.s3.ap-southeast-2.amazonaws.com", "localhost"],
+    // domains: ["cdn.oceansoft.io", "localhost"],
+    domains: ["medusa-public-images.s3.eu-west-1.amazonaws.com", "localhost"],
   },
 })
 
