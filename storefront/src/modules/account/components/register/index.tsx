@@ -43,9 +43,9 @@ const Register = () => {
 
   return (
     <div className="max-w-sm flex flex-col items-center mt-12">
-      <h1 className="text-large-semi uppercase mb-6">Become a OceanSoft Member</h1>
+      <h1 className="text-large-semi uppercase mb-6">Become an eCommerce Member</h1>
       <p className="text-center text-base-regular text-gray-700 mb-4">
-        Create your OceanSoft Member profile, and get access to an enhanced shopping
+        Create your eCommerce Member profile, and get access to an enhanced shopping
         experience.
       </p>
       <form className="w-full flex flex-col" onSubmit={onSubmit}>
@@ -92,7 +92,7 @@ const Register = () => {
           </div>
         )}
         <span className="text-center text-gray-700 text-small-regular mt-6">
-          By creating an account, you agree to OceanSoft&apos;s{" "}
+          By creating an account, you agree to eCommerce&apos;s{" "}
           <Link href="/content/privacy-policy">
             <a className="underline">Privacy Policy</a>
           </Link>{" "}
