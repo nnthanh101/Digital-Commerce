@@ -64,9 +64,10 @@
 
     cd ecommerce/backend
     # medusa develop
-    yarn start
+    # yarn start
+    yarn dev
     ```
 
-  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
+  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9999.
 
 </details>

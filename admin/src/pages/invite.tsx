@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form"
 import { decodeToken } from "react-jwt"
 import Button from "../components/fundamentals/button"
 import LongArrowRightIcon from "../components/fundamentals/icons/long-arrow-right-icon"
-import MedusaIcon from "../components/fundamentals/icons/medusa-icon"
+import OceanSoftIcon from "../components/fundamentals/icons/medusa-icon"
 import MedusaVice from "../components/fundamentals/icons/medusa-vice"
 import SigninInput from "../components/molecules/input-signin"
 import SEO from "../components/seo"
@@ -125,7 +125,7 @@ const InvitePage = ({ location }) => {
                 className="flex flex-col py-12 w-full px-[120px] items-center"
                 onSubmit={handleSubmit(handleAcceptInvite)}
               >
-                <MedusaIcon />
+                <OceanSoftIcon />
                 {!token ? (
                   <div className="h-full flex flex-col gap-y-2 text-center items-center justify-center">
                     <span className="inter-large-semibold text-grey-90">

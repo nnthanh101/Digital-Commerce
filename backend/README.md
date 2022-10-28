@@ -59,7 +59,7 @@
   medusa telemetry --disable
 
   ```
-- Create a new Medusa project
+- Create a new eCommerce-Backend project
   ```
   medusa new backend
   ```
@@ -70,16 +70,17 @@
   yarn start
   ```
 
-Your local Medusa server is now running on port **9000**.
+Your local eCommerce-Backend server is now running on port **9000**.
 
-### Seeding your Medusa store
+### Seeding your eCommerce Store
 
 ---
 
-To seed your medusa store run the following command:
+To seed your eCommerce Store run the following command:
 
 ```
-medusa seed -f ./data/seed-os.json
+# rm medusa-db.sql
+medusa seed -f ./data/seed-nft.json
 ```
 
 This command seeds your database with some sample data to get you started, including a store, an administrator account, a region and a product with variants. What the data looks like precisely you can see in the `./data/seed.json` file.
@@ -113,7 +114,7 @@ This command seeds your database with some sample data to get you started, inclu
   docker run --name ecommerce -d -p 9000:9000 ecommerce 
   ```
 
-  + Docker will run the image cms-backend, or whatever you called your project, 🤔 on port 9000.
+  + Docker will run the image cms-backend, or whatever you called your project, 🤔 on port 9999.
   + `-d` means detached and is a fancy way of saying "Runs in the background"
   + Tip: To use Medusa on another port while developing, change the first part of the run port.
 
@@ -124,7 +125,7 @@ This command seeds your database with some sample data to get you started, inclu
 
   `docker exec ecommerce medusa seed -f ./data/seed.json`
 
-  + Finally, [run on port 9000](http://localhost:9000/admin/) 👍 
+  + Finally, [run on port 9999](http://localhost:9999/admin/) 👍 
 
 > ✍️ We are currently using an SQLite database, which is always inside the container. Whenever we stop a container, we lose all changes. Using `docker-compose`, we can use a Postgres database and run multiple instances of Docker if needed.
 
@@ -161,13 +162,13 @@ This command seeds your database with some sample data to get you started, inclu
   docker-compose -p ecommerce-app up
   ```
 
-Your local Medusa server is now running on port **9000**.
+Your local eCommerce-Backend server is now running on port **9000**.
 
-### Seeding your Medusa store with Docker
+### Seeding your eCommerce-Backend store with Docker
 
 ---
 
-To add seed data to your medusa store running with Docker, run this command in a seperate terminal:
+To add seed data to your eCommerce-Backend running with Docker, run this command in a seperate terminal:
 
 ```
 docker exec ecommerce medusa seed -f ./data/seed.json
@@ -178,7 +179,7 @@ This will execute the previously described seed script in the running `medusa-se
 ## Try it out
 
 ```
-curl -X GET localhost:9000/store/products | python -m json.tool
+curl -X GET localhost:9999/store/products | python -m json.tool
 ```
 
 After the seed script has run you will have the following things in you database:

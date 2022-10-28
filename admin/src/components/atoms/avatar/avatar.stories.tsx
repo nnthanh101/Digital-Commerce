@@ -16,9 +16,9 @@ const Template = args => (
 export const User = Template.bind({})
 User.args = {
   user: {
-    first_name: "Digital",
-    last_name: "Job4U",
-    email: "digital@job4u.io",
+    first_name: "Admin",
+    last_name: "OceanSoft",
+    email: "admin@oceansoft.io",
   },
 }
 

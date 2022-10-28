@@ -1,8 +1,8 @@
 {
   "store": {
     "currencies": [
-      "eur",
-      "usd"
+      "usd",
+      "eur"
     ]
   },
   "users": [
@@ -13,7 +13,27 @@
   ],
   "regions": [
     {
-      "id": "test-region-eu",
+      "id": "asia-pacific-region",
+      "name": "AP",
+      "currency_code": "usd",
+      "tax_rate": 0,
+      "payment_providers": [
+        "manual"
+      ],
+      "fulfillment_providers": [
+        "manual"
+      ],
+      "countries": [
+        "us",
+        "ca",
+        "nz",
+        "au",
+        "sg",
+        "vn"
+      ]
+    },
+    {
+      "id": "eu-region",
       "name": "EU",
       "currency_code": "eur",
       "tax_rate": 0,
@@ -32,59 +52,43 @@
         "es",
         "it"
       ]
-    },
-    {
-      "id": "test-region-na",
-      "name": "NA",
-      "currency_code": "usd",
-      "tax_rate": 0,
-      "payment_providers": [
-        "manual"
-      ],
-      "fulfillment_providers": [
-        "manual"
-      ],
-      "countries": [
-        "us",
-        "ca"
-      ]
     }
   ],
   "shipping_options": [
     {
-      "name": "PostFake Standard",
-      "region_id": "test-region-eu",
+      "name": "Standard",
+      "region_id": "eu-region",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
       },
       "price_type": "flat_rate",
-      "amount": 1000
+      "amount": 10
     },
     {
-      "name": "PostFake Express",
-      "region_id": "test-region-eu",
+      "name": "Express",
+      "region_id": "eu-region",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
       },
       "price_type": "flat_rate",
-      "amount": 1500
+      "amount": 15
     },
     {
-      "name": "PostFake Return",
-      "region_id": "test-region-eu",
+      "name": "Return",
+      "region_id": "eu-region",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
       },
       "price_type": "flat_rate",
       "is_return": true,
-      "amount": 1000
+      "amount": 10
     },
     {
       "name": "I want to return it myself",
-      "region_id": "test-region-eu",
+      "region_id": "eu-region",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -94,39 +98,39 @@
       "amount": 0
     },
     {
-      "name": "FakeEx Standard",
-      "region_id": "test-region-na",
+      "name": "Standard",
+      "region_id": "asia-pacific-region",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
       },
       "price_type": "flat_rate",
-      "amount": 800
+      "amount": 8
     },
     {
-      "name": "FakeEx Express",
-      "region_id": "test-region-na",
+      "name": "Express",
+      "region_id": "asia-pacific-region",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
       },
       "price_type": "flat_rate",
-      "amount": 1200
+      "amount": 12
     },
     {
-      "name": "FakeEx Return",
-      "region_id": "test-region-na",
+      "name": "Return",
+      "region_id": "asia-pacific-region",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
       },
       "price_type": "flat_rate",
       "is_return": true,
-      "amount": 800
+      "amount": 8
     },
     {
       "name": "I want to return it myself",
-      "region_id": "test-region-na",
+      "region_id": "asia-pacific-region",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -138,14 +142,14 @@
   ],
   "products": [
     {
-      "title": "Medusa T-Shirt",
+      "title": "T-Shirt",
       "subtitle": null,
       "description": "Reimagine the feeling of a classic T-shirt. With our cotton T-shirts, everyday essentials no longer have to be ordinary.",
       "handle": "t-shirt",
       "is_giftcard": false,
       "weight": 400,
       "images": [
-        "https://cdn.job4u.io/ecommerce/store//tee-black-front.png",
+        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-black-front.png",
         "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-black-back.png",
         "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-white-front.png",
         "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-white-back.png"
@@ -356,7 +360,7 @@
       ]
     },
     {
-      "title": "Medusa Sweatshirt",
+      "title": "Sweatshirt",
       "subtitle": null,
       "description": "Reimagine the feeling of a classic sweatshirt. With our cotton sweatshirt, everyday essentials no longer have to be ordinary.",
       "handle": "sweatshirt",
@@ -461,7 +465,7 @@
       ]
     },
     {
-      "title": "Medusa Sweatpants",
+      "title": "Sweatpants",
       "subtitle": null,
       "description": "Reimagine the feeling of classic sweatpants. With our cotton sweatpants, everyday essentials no longer have to be ordinary.",
       "handle": "sweatpants",
@@ -566,7 +570,7 @@
       ]
     },
     {
-      "title": "Medusa Shorts",
+      "title": "Shorts",
       "subtitle": null,
       "description": "Reimagine the feeling of classic shorts. With our cotton shorts, everyday essentials no longer have to be ordinary.",
       "handle": "shorts",
@@ -671,7 +675,7 @@
       ]
     },
     {
-      "title": "Medusa Hoodie",
+      "title": "Hoodie",
       "subtitle": null,
       "description": "Reimagine the feeling of a classic hoodie. With our cotton hoodie, everyday essentials no longer have to be ordinary.",
       "handle": "hoodie",
@@ -776,7 +780,7 @@
       ]
     },
     {
-      "title": "Medusa Longsleeve",
+      "title": "Longsleeve",
       "subtitle": null,
       "description": "Reimagine the feeling of a classic longsleeve. With our cotton longsleeve, everyday essentials no longer have to be ordinary.",
       "handle": "longsleeve",
@@ -881,7 +885,7 @@
       ]
     },
     {
-      "title": "Medusa Coffee Mug",
+      "title": "Coffee Mug",
       "subtitle": null,
       "description": "Every programmer's best friend.",
       "handle": "coffee-mug",
@@ -904,11 +908,11 @@
           "prices": [
             {
               "currency_code": "eur",
-              "amount": 1000
+              "amount": 299
             },
             {
               "currency_code": "usd",
-              "amount": 1200
+              "amount": 300
             }
           ],
           "options": [
@@ -916,7 +920,7 @@
               "value": "One Size"
             }
           ],
-          "inventory_quantity": 100,
+          "inventory_quantity": 10,
           "manage_inventory": true
         }
       ]
