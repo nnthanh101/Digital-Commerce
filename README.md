@@ -71,3 +71,5 @@
   * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9999.
 
 </details>
+
+>  💰 Building a Production-Ready Shopify-like Digital Commerce 🎁 `OceanSoftIO/ecommerce`
