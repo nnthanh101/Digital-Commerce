@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import React, { useState } from "react"
-import MedusaIcon from "../components/fundamentals/icons/medusa-icon"
+import OceanSoftIcon from "../components/fundamentals/icons/medusa-icon"
 import LoginCard from "../components/organisms/login-card"
 import ResetTokenCard from "../components/organisms/reset-token-card"
 import SEO from "../components/seo"
@@ -22,7 +22,7 @@ const LoginPage = () => {
           )}
         >
           <div className="flex flex-col pt-12 w-full px-[120px] items-center">
-            <MedusaIcon />
+            <OceanSoftIcon />
             {resetPassword ? (
               <ResetTokenCard goBack={() => setResetPassword(false)} />
             ) : (

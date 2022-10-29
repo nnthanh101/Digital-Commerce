@@ -1,15 +1,15 @@
 import { QueryClient } from "react-query"
 
-let medusaUrl = "http://localhost:9000"
+let ecommerceUrl = "http://localhost:9999"
 
 // deprecated
 if (process.env.GATSBY_STORE_URL) {
-  medusaUrl = process.env.GATSBY_STORE_URL
+  ecommerceUrl = process.env.GATSBY_STORE_URL
 }
 
 // takes precedence over GATSBY_STORE_URL
 if (process.env.GATSBY_ECOMMERCE_BACKEND_URL) {
-  medusaUrl = process.env.GATSBY_ECOMMERCE_BACKEND_URL
+  ecommerceUrl = process.env.GATSBY_ECOMMERCE_BACKEND_URL
 }
 
 const queryClient = new QueryClient({
@@ -22,4 +22,4 @@ const queryClient = new QueryClient({
   },
 })
 
-export { medusaUrl, queryClient }
+export { ecommerceUrl, queryClient }

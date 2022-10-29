@@ -14,14 +14,14 @@ const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />
 export const Default = Template.bind({})
 Default.args = {
   label: "First name",
-  placeholder: "Digital",
+  placeholder: "Admin",
 }
 
 export const Required = Template.bind({})
 Required.args = {
   label: "Email",
   required: true,
-  placeholder: "digital@job4u.io",
+  placeholder: "admin@oceansoft.io",
 }
 
 export const WithInfoTooltip = Template.bind({})
