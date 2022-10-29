@@ -42,7 +42,7 @@
 
   ```
 
-  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
+  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9999.
 
 </details>
 
@@ -63,6 +63,8 @@
   - [ ] [Cypress](https://www.cypress.io/)
   - [x] [Medusa](https://medusajs.com/) || [Medusa Next.js Starter](https://github.com/medusajs/nextjs-starter-medusa)
   - [ ] [Search]
+
+  > The Shopify-like digital commerce engine built for developers optimizes operations and creates unique customer experiences; offers extensibility and customization with minimal developer effort; and provides an open, modular architecture that eliminates "hacky" workarounds, as well as speed and maintainability, allowing merchants to scale quickly.
   
 </details>
 
@@ -113,7 +115,7 @@ yarn dev
 
 ### Open the code and start customizing
 
-Your site is now running at http://localhost:8000!
+Your site is now running at http://localhost:8888!
 
 Edit `/pages/index.tsx` to see your site update in real-time!
 

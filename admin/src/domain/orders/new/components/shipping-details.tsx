@@ -177,7 +177,7 @@ const ShippingDetails = () => {
         <InputField
           {...form.register("email")}
           label="Email"
-          placeholder="digital@job4u.io"
+          placeholder="admin@oceansoft.io"
           disabled={!!customerId}
           required
           // @ts-ignore

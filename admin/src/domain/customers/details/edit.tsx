@@ -77,12 +77,12 @@ const EditCustomerModal = ({
             <InputField
               label="First Name"
               {...register("first_name")}
-              placeholder="Digital"
+              placeholder="Admin"
             />
             <InputField
               label="Last Name"
               {...register("last_name")}
-              placeholder="Job4U"
+              placeholder="OceanSoft"
             />
           </div>
           <div className="inter-base-semibold text-grey-90 mb-4">Contact</div>

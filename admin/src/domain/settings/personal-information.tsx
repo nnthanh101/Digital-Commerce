@@ -96,7 +96,7 @@ const PersonalInformation = () => {
               <Input
                 label="First name"
                 name="first_name"
-                placeholder="Digital"
+                placeholder="Admin"
                 defaultValue={user.first_name}
                 onChange={(e) => setValue("first_name", e.target.value)}
                 className="mr-4"
@@ -104,7 +104,7 @@ const PersonalInformation = () => {
               <Input
                 label="Last name"
                 name="last_name"
-                placeholder="Job4U"
+                placeholder="OceanSoft"
                 defaultValue={user.last_name}
                 onChange={(e) => setValue("last_name", e.target.value)}
               />
