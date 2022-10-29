@@ -38,8 +38,8 @@ const eventActions = (
 
 export const NoteCurrentUser = Template.bind({})
 NoteCurrentUser.args = {
-  icon: <Avatar user={{ email: "digital@job4u.io" }} />,
-  title: "digital@job4u.io",
+  icon: <Avatar user={{ email: "admin@oceansoft.io" }} />,
+  title: "admin@oceansoft.io",
   topNode: eventActions,
   time: new Date(),
   children: (
@@ -51,8 +51,8 @@ NoteCurrentUser.args = {
 
 export const NoteOtherUser = Template.bind({})
 NoteOtherUser.args = {
-  icon: <Avatar user={{ email: "digital@job4u.io" }} />,
-  title: "digital@job4u.io",
+  icon: <Avatar user={{ email: "admin@oceansoft.io" }} />,
+  title: "admin@oceansoft.io",
   topNode: eventActions,
   time: new Date(),
   children: (
@@ -72,7 +72,7 @@ MailNotice.args = {
       <div className="text-grey-40 mr-2xsmall">
         <ArrowRightIcon size={16} />
       </div>
-      <span>digital@job4u.io</span>
+      <span>admin@oceansoft.io</span>
     </div>
   ),
   topNode: eventActions,

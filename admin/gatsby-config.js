@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `medusa-admin`,
-        short_name: `medusa`,
+        name: `oceansoft-admin`,
+        short_name: `oceansoft`,
         icon: `src/images/logo.svg`,
       },
     },

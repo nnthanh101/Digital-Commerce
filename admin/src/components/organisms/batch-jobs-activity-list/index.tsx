@@ -15,7 +15,7 @@ import getRelativeTime from "../../../utils/get-relative-time"
 import Spinner from "../../atoms/spinner"
 import Button, { ButtonProps } from "../../fundamentals/button"
 import FileIcon from "../../fundamentals/icons/file-icon"
-import MedusaIcon from "../../fundamentals/icons/medusa-icon"
+import OceanSoftIcon from "../../fundamentals/icons/medusa-icon"
 import { ActivityCard } from "../../molecules/activity-card"
 import BatchJobFileCard from "../../molecules/batch-job-file-card"
 import { batchJobDescriptionBuilder, BatchJobOperation } from "./utils"
@@ -228,7 +228,7 @@ const BatchJobActivityCard = (props: { batchJob: BatchJob }) => {
   return (
     <ActivityCard
       title={store?.name ?? "eCommerce Team"}
-      icon={<MedusaIcon className="mr-3" size={20} />}
+      icon={<OceanSoftIcon className="mr-3" size={20} />}
       relativeTimeElapsed={relativeTimeElapsed.rtf}
       date={batchJob.created_at}
       shouldShowStatus={true}

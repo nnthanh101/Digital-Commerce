@@ -121,7 +121,7 @@ const CustomGiftcard: React.FC<CustomGiftcardProps> = ({ onDismiss }) => {
                 label={"Email"}
                 required
                 {...register("metadata.email", { required: true })}
-                placeholder="digital@job4u.io"
+                placeholder="admin@oceansoft.io"
                 type="email"
               />
               <TextArea

@@ -45,11 +45,11 @@
     yarn start
 
     echo "Testing APIs"
-    curl localhost:9000/store/products | python -m json.tool
+    curl localhost:9999/store/products | python -m json.tool
 
     ```
 
-  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
+  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9999.
 
   > After these above steps and only a couple of minutes, you now have a complete commerce engine running locally. You may now explore [the documentation](https://docs.medusa-commerce.com/api) to learn how to interact with the Medusa API. You may also add [plugins](https://github.com/medusajs/medusa/tree/master/packages) to your eCommerce Store by specifying them in your `medusa-config.js` file.
 
@@ -72,12 +72,12 @@
    # yarn start
    yarn dev
    ```
-4. **Go to [http://localhost:7000](http://localhost:7000)**
+4. **Go to [http://localhost:7777](http://localhost:7777)**
 
 * Back in your Medusa engine installation directory, you can create your own user for the admin by running:
 
     ```
-    medusa user -e digital@job4u.io -p some-password
+    medusa user -e admin@oceansoft.io -p some-password
     ```
  
  * Alternatively, if you've seeded your server with our dummy data, you can use the following credentials:
@@ -105,7 +105,7 @@
       npx create-next-app -e https://github.com/medusajs/nextjs-starter-medusa my-medusa-storefront
       ```
   
-  * With your starter and your eCommerce Store running, you can open http://localhost:8000 (for Gatsby) or http://localhost:3000 (for Nextjs) in your browser and view the products in your store, build a cart, add shipping details and pay and complete an order.
+  * With your starter and your eCommerce Store running, you can open http://localhost:8888 in your browser and view the products in your store, build a cart, add shipping details and pay and complete an order.
   
 </details>
   
