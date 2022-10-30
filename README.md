@@ -54,6 +54,11 @@
 
 2. 📚 [Documentation as Code 🎓](https://blog.oceansoft.io/docs-as-code): [ecommerce.aws.oceansoft.io](https://ecommerce.aws.oceansoft.io) 
 
+2. 📚 [Diagram as Code 🎓](https://www.linkedin.com/posts/nnthanh_diagram-as-code-activity-6992390848747364352-w5L-)
+
+  * [x] [3-Tier-Application-Architecture-Dev](README/3-Tier-Application-Architecture-Dev.gif): https://youtu.be/7zMbdtBm7-k
+  * [x] [🎓 Advanced Web Service with On-Premise 🏪](README/Architecture.gif): https://youtu.be/4BX1ia-HyOU
+
 <details>
 <summary>3. eCommerce Backend</summary>
   

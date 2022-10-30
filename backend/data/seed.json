@@ -908,11 +908,11 @@
           "prices": [
             {
               "currency_code": "eur",
-              "amount": 299
+              "amount": 999
             },
             {
               "currency_code": "usd",
-              "amount": 300
+              "amount": 1000
             }
           ],
           "options": [
