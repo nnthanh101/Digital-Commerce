@@ -25,34 +25,64 @@ tasks:
   #     echo "curl -X GET localhost:9000/store/products | python -m json.tool"
   #   openMode: split-right
 
-  - name: 2.1. backend >> docker compose
-    ## working directory as `/ecommerce/backend`
-    before: |
-      npm install @medusajs/medusa-cli@latest -g
-      cd backend
-    # init: |
-    #   docker compose pull
-    command: |
-      docker compose up --build
-      # gp sync-done finished
-    openMode: split-left
+  # - name: 2.1. backend >> docker compose
+  #   ## working directory as `/ecommerce/backend`
+  #   before: |
+  #     npm install @medusajs/medusa-cli@latest -g
+  #     cd backend
+  #   # init: |
+  #   #   docker compose pull
+  #   command: |
+  #     docker compose up --build
+  #     # gp sync-done finished
+  #   openMode: split-left
 
-  - name: 2.2. backend >> docker compose (test)
-    ## working directory as `/ecommerce/backend`
+  # - name: 2.2. backend >> docker compose (test)
+  #   ## working directory as `/ecommerce/backend`
+  #   before: |
+  #     cd backend
+  #   init: |
+  #     # curl -X GET localhost:9000/store/products | python -m json.tool
+  #     echo "docker image ls"
+  #     echo "docker container ls"
+  #     echo "docker exec ecommerce-backend medusa seed -f ./data/seed.json"
+  #   command: |
+  #     # gp sync-await finished && \
+  #     echo "curl -X GET localhost:9000/store/products | python -m json.tool"
+  #   openMode: split-right
+
+
+  - name: Start Redis Stack
+    ## working directory as `/README/lab1.express-redis`
     before: |
-      cd backend
+      cd README/lab1.express-redis
     init: |
-      # curl -X GET localhost:9000/store/products | python -m json.tool
-      echo "docker image ls"
-      echo "docker container ls"
-      echo "docker exec ecommerce-backend medusa seed -f ./data/seed.json"
+     docker compose pull
     command: |
-      # gp sync-await finished && \
-      echo "curl -X GET localhost:9000/store/products | python -m json.tool"
+     alias redis-cli="docker exec -it redis-stack redis-cli" 
+     echo "Use redis-cli to interact with Redis here."
+     docker compose up -d
+     gp sync-done finished
+    openMode: split-left
+    
+  - name: Start Express Application
+    ## working directory as `/README/lab1.express-redis`
+    before: |
+      cd README/lab1.express-redis/backend
+    init: |
+      npm install
+    command: |
+      gp sync-await finished && \
+      npm run dev
     openMode: split-right
 
 
 ## List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 9000
+    onOpen: ignore 
+
+  - port: 9999
+    onOpen: open-preview
+  - port: 6379
     onOpen: ignore 
