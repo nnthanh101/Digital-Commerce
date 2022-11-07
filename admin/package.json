@@ -112,7 +112,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop -p 7777",
+    "dev": "gatsby develop -p 7000",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "start": "npm run dev",
     "serve": "gatsby serve",

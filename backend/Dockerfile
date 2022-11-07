@@ -1,20 +1,17 @@
-FROM node:17.1.0 as deps
+FROM node:16
 
 WORKDIR /app/ecommerce
 
 COPY package*.json ./
+COPY develop.sh .
 
-RUN yarn global add @medusajs/medusa-cli@latest
+RUN apt-get update
+RUN apt-get install -y python
+RUN npm install npm@latest -g
+RUN npm install @medusajs/medusa-cli@latest -g
+
+RUN npm install --loglevel=error
 
 COPY . .
-
-RUN ls
-RUN yarn install
-
-## ===== DEVELOPMENT STAGE =====
-
-FROM deps as dev
-
-ENV NODE_ENV=development
 
 ENTRYPOINT ["./develop.sh", "develop"]

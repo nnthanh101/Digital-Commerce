@@ -42,7 +42,7 @@
 
   ```
 
-  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9999.
+  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
 
 </details>
 
@@ -115,7 +115,7 @@ yarn dev
 
 ### Open the code and start customizing
 
-Your site is now running at http://localhost:8888!
+Your site is now running at http://localhost:8000!
 
 Edit `/pages/index.tsx` to see your site update in real-time!
 

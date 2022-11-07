@@ -23,10 +23,10 @@ try {
 }
 
 // CORS when consuming eCommerce-Backend from admin
-const ADMIN_CORS = process.env.ADMIN_CORS || "http://localhost:7777,http://localhost:7000";
+const ADMIN_CORS = process.env.ADMIN_CORS || "http://0.0.0.0:7000,http://localhost:7000,http://localhost:7000";
 
 // CORS to avoid issues when consuming eCommerce-Backend from a client
-const STORE_CORS = process.env.STORE_CORS || "http://localhost:8888,http://localhost:8000";
+const STORE_CORS = process.env.STORE_CORS || "http://0.0.0.0:8000,http://localhost:8000,http://localhost:8000";
 
 // Database URL (here we use a local database called medusa-development)
 const DATABASE_URL =
@@ -57,11 +57,11 @@ const plugins = [
 module.exports = {
   projectConfig: {
     
-    // /** Option1 - SQLite (default): Development-like Environment || https://sqlitebrowser.org */
-    database_database: "./ecommerce-db.sql",
+    /** Option1 - SQLite (default): Development-like Environment || https://sqlitebrowser.org */
+    database_database: "./ecommerce.sql",
     database_type: "sqlite",
 
-    /** Option2 - PostgresQL: For more production-like environment */
+    // /** Option2 - PostgresQL: For more production-like environment */
     // redis_url: REDIS_URL,
     // database_url: DATABASE_URL, //postgres connectionstring
     // database_type: "postgres",

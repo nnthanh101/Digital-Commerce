@@ -125,7 +125,7 @@ This command seeds your database with some sample data to get you started, inclu
 
   `docker exec ecommerce medusa seed -f ./data/seed.json`
 
-  + Finally, [run on port 9999](http://localhost:9999/admin/) 👍 
+  + Finally, [run on port 9000](http://localhost:9000/admin/) 👍 
 
 > ✍️ We are currently using an SQLite database, which is always inside the container. Whenever we stop a container, we lose all changes. Using `docker-compose`, we can use a Postgres database and run multiple instances of Docker if needed.
 
@@ -179,7 +179,7 @@ This will execute the previously described seed script in the running `medusa-se
 ## Try it out
 
 ```
-curl -X GET localhost:9999/store/products | python -m json.tool
+curl -X GET localhost:9000/store/products | python -m json.tool
 ```
 
 After the seed script has run you will have the following things in you database:

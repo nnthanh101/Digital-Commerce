@@ -1,6 +1,6 @@
 import { QueryClient } from "react-query"
 
-let ecommerceUrl = "http://localhost:9999"
+let ecommerceUrl = "http://localhost:9000"
 
 // deprecated
 if (process.env.GATSBY_STORE_URL) {
