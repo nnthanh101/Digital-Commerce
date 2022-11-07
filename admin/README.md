@@ -45,11 +45,11 @@
     yarn start
 
     echo "Testing APIs"
-    curl localhost:9999/store/products | python -m json.tool
+    curl localhost:9000/store/products | python -m json.tool
 
     ```
 
-  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9999.
+  * ✅ An [eCommerce Backend Docker](https://github.com/OceanSoftIO/ecommerce/blob/main/docker/) should be running locally on port 9000.
 
   > After these above steps and only a couple of minutes, you now have a complete commerce engine running locally. You may now explore [the documentation](https://docs.medusa-commerce.com/api) to learn how to interact with the Medusa API. You may also add [plugins](https://github.com/medusajs/medusa/tree/master/packages) to your eCommerce Store by specifying them in your `medusa-config.js` file.
 

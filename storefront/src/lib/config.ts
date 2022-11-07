@@ -2,7 +2,7 @@ import Medusa from "@medusajs/medusa-js"
 import { QueryClient } from "react-query"
 
 // Defaults to standard port for eCommerce server
-let ECOMMERCE_BACKEND_URL = "http://localhost:9999"
+let ECOMMERCE_BACKEND_URL = "http://localhost:9000"
 
 if (process.env.NEXT_PUBLIC_ECOMMERCE_BACKEND_URL) {
   ECOMMERCE_BACKEND_URL = process.env.NEXT_PUBLIC_ECOMMERCE_BACKEND_URL
