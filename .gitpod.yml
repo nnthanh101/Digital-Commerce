@@ -80,10 +80,10 @@ tasks:
     ## working directory as `/README/lab2.elasticsearch-logstash-kibana`
     before: |
       cd README/lab2.elasticsearch-logstash-kibana
-    # init: |
-    #  docker compose pull
+    init: |
+     docker compose pull
     command: |
-     docker compose up --build
+     docker compose up -d
      gp sync-done finished
     openMode: split-left
     
