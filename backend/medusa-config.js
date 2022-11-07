@@ -58,7 +58,7 @@ module.exports = {
   projectConfig: {
     
     // /** Option1 - SQLite (default): Development-like Environment || https://sqlitebrowser.org */
-    database_database: "./ecommerce-db.sql",
+    database_database: "./ecommerce.sql",
     database_type: "sqlite",
 
     /** Option2 - PostgresQL: For more production-like environment */

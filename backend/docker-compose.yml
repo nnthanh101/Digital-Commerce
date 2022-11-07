@@ -17,7 +17,7 @@ services:
       COOKIE_SECRET: something
       PORT: 9000
     ports:
-      - "9999:9000"
+      - "9000:9000"
     volumes:
       - .:/app/ecommerce
       - node_modules:/app/ecommerce/node_modules
