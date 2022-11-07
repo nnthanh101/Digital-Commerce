@@ -15,7 +15,7 @@ tasks:
   - name: Start Express Application
     ## working directory as `/README/lab1.express-redis`
     before: |
-      cd README/lab1.express-redis
+      cd README/lab1-express-redis
     init: |
       npm install
     command: |
