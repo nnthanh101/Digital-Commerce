@@ -1,20 +1,54 @@
 ## List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
 
-  - name: backend
+  # - name: 1.1. backend
+  #   ## working directory as `/ecommerce/backend`
+  #   before: |
+  #     npm install @medusajs/medusa-cli@latest -g
+  #     cd backend
+  #   init: |
+  #     npm install
+  #   command: |
+  #     npm run dev
+
+  - name: 1.2. backend (test)
     ## working directory as `/ecommerce/backend`
-    ## TEST
-    ## npm run seed
-    ## curl -X GET localhost:9000/store/products | python -m json.tool
+    before: |
+      cd backend
+    init: |
+      # echo "curl -X GET localhost:9000/store/products | python -m json.tool"
+      echo "npm run seed"
+    command: |
+      echo "curl -X GET localhost:9000/store/products | python -m json.tool"
+
+  - name: 2.1. backend >> docker compose
+    ## working directory as `/ecommerce/backend`
     before: |
       npm install @medusajs/medusa-cli@latest -g
       cd backend
-    init: |
-      npm install
+    # init: |
+    #   docker compose pull
     command: |
-      npm run dev
+      docker compose up --build
+
+  - name: 2.2. backend >> docker compose (test)
+    ## working directory as `/ecommerce/backend`
+    before: |
+      cd backend
+    init: |
+      # curl -X GET localhost:9000/store/products | python -m json.tool
+      # docker image ls
+      # docker container ls
+      # docker exec ecommerce-backend medusa seed -f ./data/seed.json
+      echo "medusa seed -f ./data/seed.json"
+    command: |
+      echo "curl -X GET localhost:9000/store/products | python -m json.tool"
 
 ## List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 9000
     onOpen: ignore
+  # - port: 8000
+  #   onOpen: open-browser
+  # - port: 7000
+  #   onOpen: open-preview
