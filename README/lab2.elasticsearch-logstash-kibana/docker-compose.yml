@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+
   elasticsearch:
     image: elasticsearch:8.5.0
     container_name: es
@@ -17,6 +18,7 @@ services:
       retries: 3
     networks:
       - elastic
+  
   logstash:
     image: logstash:8.5.0
     container_name: log
@@ -36,6 +38,7 @@ services:
     networks:
       - elastic
     command: logstash -f /usr/share/logstash/pipeline/logstash-nginx.config
+
   kibana:
     image: kibana:8.5.0
     container_name: kibana
@@ -45,6 +48,7 @@ services:
       - elasticsearch
     networks:
       - elastic
+
 networks:
   elastic:
     driver: bridge
