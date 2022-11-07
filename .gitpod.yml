@@ -3,6 +3,9 @@ tasks:
 
   - name: backend
     ## working directory as `/ecommerce/backend`
+    ## TEST
+    ## npm run seed
+    ## curl -X GET localhost:9000/store/products | python -m json.tool
     before: |
       npm install @medusajs/medusa-cli@latest -g
       cd backend

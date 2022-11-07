@@ -72,7 +72,7 @@
    # yarn start
    yarn dev
    ```
-4. **Go to [http://localhost:7777](http://localhost:7777)**
+4. **Go to [http://localhost:7000](http://localhost:7000)**
 
 * Back in your Medusa engine installation directory, you can create your own user for the admin by running:
 
@@ -105,7 +105,7 @@
       npx create-next-app -e https://github.com/medusajs/nextjs-starter-medusa my-medusa-storefront
       ```
   
-  * With your starter and your eCommerce Store running, you can open http://localhost:8888 in your browser and view the products in your store, build a cart, add shipping details and pay and complete an order.
+  * With your starter and your eCommerce Store running, you can open http://localhost:8000 in your browser and view the products in your store, build a cart, add shipping details and pay and complete an order.
   
 </details>
   
