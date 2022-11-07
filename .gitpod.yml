@@ -10,7 +10,7 @@ tasks:
       npm install
     command: |
       npm run dev
-      gp sync-done finished
+      # gp sync-done finished
     openMode: split-left
 
   - name: 1.2. backend (test)
@@ -21,7 +21,7 @@ tasks:
       # echo "curl -X GET localhost:9000/store/products | python -m json.tool"
       echo "npm run seed"
     command: |
-      gp sync-await finished && \
+      # gp sync-await finished && \
       echo "curl -X GET localhost:9000/store/products | python -m json.tool"
     openMode: split-right
 
