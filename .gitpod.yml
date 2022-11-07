@@ -52,28 +52,52 @@ tasks:
   #   openMode: split-right
 
 
-  - name: Start Redis Stack
-    ## working directory as `/README/lab1.express-redis`
+  # - name: Start Redis Stack
+  #   ## working directory as `/README/lab1.express-redis`
+  #   before: |
+  #     cd README/lab1.express-redis
+  #   init: |
+  #    docker compose pull
+  #   command: |
+  #    alias redis-cli="docker exec -it redis-stack redis-cli" 
+  #    echo "Use redis-cli to interact with Redis here."
+  #    docker compose up -d
+  #    gp sync-done finished
+  #   openMode: split-left
+    
+  # - name: Start Express Application
+  #   ## working directory as `/README/lab1.express-redis`
+  #   before: |
+  #     cd README/lab1.express-redis/backend
+  #   init: |
+  #     npm install
+  #   command: |
+  #     gp sync-await finished && \
+  #     npm run dev
+  #   openMode: split-right
+
+
+  - name: Start ELK Elasticsearch Logstash Kibana
+    ## working directory as `/README/lab2.elasticsearch-logstash-kibana`
     before: |
-      cd README/lab1.express-redis
+      cd README/lab2.elasticsearch-logstash-kibana
     init: |
      docker compose pull
     command: |
-     alias redis-cli="docker exec -it redis-stack redis-cli" 
-     echo "Use redis-cli to interact with Redis here."
      docker compose up -d
      gp sync-done finished
     openMode: split-left
     
-  - name: Start Express Application
-    ## working directory as `/README/lab1.express-redis`
+  - name: Test ELK
+    ## working directory as `/README/lab2.elasticsearch-logstash-kibana`
     before: |
-      cd README/lab1.express-redis/backend
+      cd README/lab2.elasticsearch-logstash-kibana
     init: |
-      npm install
+      echo "[Test ELK] init ..."
     command: |
       gp sync-await finished && \
-      npm run dev
+      echo "[Test ELK] command ..."
+      echo "PORTS >> 5601 >> Open Preview"
     openMode: split-right
 
 
@@ -81,6 +105,10 @@ tasks:
 ports:
   - port: 9000
     onOpen: ignore 
+  # - port: 8000
+  #   onOpen: open-browser
+  # - port: 7000
+  #   onOpen: open-preview
 
   - port: 9999
     onOpen: open-preview
