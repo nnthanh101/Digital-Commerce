@@ -57,14 +57,14 @@ const plugins = [
 module.exports = {
   projectConfig: {
     
-    // /** Option1 - SQLite (default): Development-like Environment || https://sqlitebrowser.org */
-    // database_database: "./ecommerce.sql",
-    // database_type: "sqlite",
+    /** Option1 - SQLite (default): Development-like Environment || https://sqlitebrowser.org */
+    database_database: "./ecommerce.sql",
+    database_type: "sqlite",
 
-    /** Option2 - PostgresQL: For more production-like environment */
-    redis_url: REDIS_URL,
-    database_url: DATABASE_URL, //postgres connectionstring
-    database_type: "postgres",
+    // /** Option2 - PostgresQL: For more production-like environment */
+    // redis_url: REDIS_URL,
+    // database_url: DATABASE_URL, //postgres connectionstring
+    // database_type: "postgres",
 
     store_cors: STORE_CORS,
     admin_cors: ADMIN_CORS,
