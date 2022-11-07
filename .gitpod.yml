@@ -22,7 +22,7 @@ tasks:
       echo "npm run seed"
     command: |
       gp sync-await finished && \
-      curl -X GET localhost:9000/store/products | python -m json.tool
+      echo "curl -X GET localhost:9000/store/products | python -m json.tool"
     openMode: split-right
 
   # - name: 2.1. backend >> docker compose
@@ -55,9 +55,8 @@ tasks:
 
 ## List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  # - port: 9000
-  #   onOpen: ignore
-
+  - port: 9000
+    onOpen: ignore
   # - port: 8000
   #   onOpen: open-browser
   # - port: 7000
