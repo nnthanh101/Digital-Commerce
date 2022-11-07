@@ -13,6 +13,9 @@ tasks:
      gp sync-done finished
     openMode: split-left
   - name: Start Express Application
+    ## working directory as `/README/lab1.express-redis`
+    before: |
+      cd README/lab1.express-redis
     init: |
       npm install
     command: |

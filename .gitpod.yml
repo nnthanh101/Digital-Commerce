@@ -10,6 +10,8 @@ tasks:
   #     npm install
   #   command: |
   #     npm run dev
+  #     gp sync-done finished
+  #   openMode: split-left
 
   # - name: 1.2. backend (test)
   #   ## working directory as `/ecommerce/backend`
@@ -19,7 +21,9 @@ tasks:
   #     # echo "curl -X GET localhost:9000/store/products | python -m json.tool"
   #     echo "npm run seed"
   #   command: |
-  #     echo "curl -X GET localhost:9000/store/products | python -m json.tool"
+  #     gp sync-await finished && \
+  #     curl -X GET localhost:9000/store/products | python -m json.tool
+  #   openMode: split-right
 
   # - name: 2.1. backend >> docker compose
   #   ## working directory as `/ecommerce/backend`
@@ -30,6 +34,8 @@ tasks:
   #   #   docker compose pull
   #   command: |
   #     docker compose up --build
+  #     gp sync-done finished
+  #   openMode: split-left
 
   # - name: 2.2. backend >> docker compose (test)
   #   ## working directory as `/ecommerce/backend`
@@ -42,34 +48,16 @@ tasks:
   #     # docker exec ecommerce-backend medusa seed -f ./data/seed.json
   #     echo "medusa seed -f ./data/seed.json"
   #   command: |
-  #     echo "curl -X GET localhost:9000/store/products | python -m json.tool"
+  #     gp sync-await finished && \
+  #     curl -X GET localhost:9000/store/products | python -m json.tool
+  #   openMode: split-right
 
-  - name: Start Redis Stack
-    ## working directory as `/ecommerce/backend`
-    before: |
-      cd README/lab1.express-redis
-    init: |
-     docker-compose pull
-    command: |
-     alias redis-cli="docker exec -it redis-stack redis-cli" 
-     echo "Use redis-cli to interact with Redis here."
-     docker-compose up -d
-     gp sync-done finished
-    openMode: split-left
-  - name: Start Express Application
-    init: |
-      npm install
-    command: |
-      gp sync-await finished && \
-      npm run dev
-    openMode: split-right
 
 ## List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  - port: 9000
-    onOpen: ignore
-  - port: 9999
-    onOpen: open-preview
+  # - port: 9000
+  #   onOpen: ignore
+
   # - port: 8000
   #   onOpen: open-browser
   # - port: 7000
