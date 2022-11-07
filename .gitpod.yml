@@ -96,6 +96,7 @@ tasks:
     command: |
       gp sync-await finished && \
       echo "[Test ELK] command ..."
+      echo "PORTS >> 5601 >> Open Preview"
     openMode: split-right
 
 
