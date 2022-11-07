@@ -3,6 +3,7 @@ ports:
     onOpen: open-preview
 
 tasks:
+
   - name: Start Redis Stack
     init: |
      docker-compose pull
@@ -12,10 +13,11 @@ tasks:
      docker-compose up -d
      gp sync-done finished
     openMode: split-left
+    
   - name: Start Express Application
     ## working directory as `/README/lab1.express-redis`
-    before: |
-      cd README/lab1-express-redis
+    # before: |
+      # cd README/lab1.express-redis
     init: |
       npm install
     command: |
