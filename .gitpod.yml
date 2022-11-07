@@ -68,7 +68,7 @@ tasks:
   - name: Start Express Application
     ## working directory as `/README/lab1.express-redis`
     before: |
-      cd README/lab1.express-redis
+      cd README/lab1.express-redis/backend
     init: |
       npm install
     command: |
@@ -83,6 +83,8 @@ ports:
     onOpen: ignore
   - port: 9999
     onOpen: open-preview
+  - port: 6379
+    onOpen: ignore  
   # - port: 8000
   #   onOpen: open-browser
   # - port: 7000
